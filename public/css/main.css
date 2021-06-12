@@ -1,0 +1,357 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+  color: #25282b;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.hideScroll {
+  overflow: hidden;
+}
+
+body a {
+  text-decoration: none;
+  color: #ff5e84;
+  font-weight: bold;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
+body #container {
+  width: 90%;
+  max-width: 980px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #container #intro {
+  width: 300px;
+  margin-right: 20px;
+}
+
+body #container #intro main {
+  margin: 32px 0;
+}
+
+body #container #intro #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body #container #intro button {
+  border: none;
+  font-weight: bold;
+  background: none;
+  color: #ff5e84;
+  cursor: pointer;
+  outline: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+
+
+
+
+
+body #container #intro footer {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  color: #777;
+}
+
+body #container #intro footer {
+  opacity: 0.8;
+}
+
+body #container #last-ideas {
+  margin-left: 32px;
+}
+
+body #container  .idea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 32px;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+          box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+}
+
+body #container  .idea p {
+  margin: 8px 0;
+  color: #777;
+}
+
+body #container .idea .description {
+  margin: 16px 0;
+}
+
+body #container  .idea img {
+  width: 60px;
+  height: 60px;
+  margin-right: 32px;
+}
+
+body #container p, body #container .description {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+
+
+ #modal {
+  position: fixed;
+
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+
+  background-color: #ff5e84;
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+ #modal .content {
+  margin-top: 15%;
+  color: #fff;
+}
+
+
+
+body #modal .content h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body #modal .content form {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto 15%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+body #modal .content form div:nth-child(3),
+body #modal .content form div:nth-child(4),
+body #modal .content form div:nth-child(5) {
+  grid-column: span 2;
+}
+
+body #modal .content form input,
+body #modal .content form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(185, 19, 57, 0.4);
+  outline: none;
+  font-size: 16px;
+}
+
+body #modal .content form label {
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.8px;
+}
+
+body #modal .content form a {
+  background-color: #ffffff22;
+  color: #ffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+
+body #modal .content form a:hover {
+  background-color: #fd2557;
+}
+
+body #modal .content form button {
+  background-color: #fff;
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 32px;
+  outline: none;
+  border: none;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+body #modal .content form button:hover {
+  background-color: #0984e3;
+  color: #fff;
+  text-decoration: none;
+}
+
+#modal.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
+.button {
+  color: white;
+  background-color: #ff5e84;
+  font-size:14px;
+ font-weight: bold;
+
+ width:150px;
+ height: 40px;
+
+ border-radius: 8px;
+
+ display:flex;
+ align-items: center;
+ justify-content: center;
+
+
+  -webkit-box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
+          box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+
+
+}
+
+.button:hover {
+  background-color: #fd2557;
+  text-decoration: none;
+}
+
+
+
+
+
+/*# PAGE IDEAS*/
+#page-ideas #container{
+  display: block;
+}
+
+#page-ideas header {
+  display: flex;
+  justify-content:space-between;
+}
+
+#page-ideas nav ul{
+  display: flex;
+  align-items: center;
+}
+
+#page-ideas nav li{
+  list-style:none;
+
+  margin-right: 16px;
+}
+
+#page-ideas nav li a{
+  color:#25282b;
+}
+
+#page-ideas nav li a.button{
+  color:#fff;
+}
+
+#page-ideas nav li:last-child{
+  margin-right:0;
+
+}
+
+
+
+section#title{
+  text-align: center;
+}
+
+section#title p{
+  opacity: .7;
+}
+
+section#title h1{
+  font-size:28px;
+}
+
+section#ideas{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
+
+}
+
+section#ideas .idea{
+  margin: 0;
+}
+
+section#title,
+section#ideas,
+footer{
+  margin-top: 72px;
+}
+
+footer{
+  text-align: center;
+}

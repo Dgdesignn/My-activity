@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <section id="intro">
+        <header>
+            
+            <img src="./images/casacriativa.png" alt="casa criativa" >
+
+        </header>
+
+        <main>
+            <p>
+                Fica em casa em perídos longos,
+                não deve ser nada fácil
+            </p>
+
+            <p>
+                Por isso, irei catalogar ideias,
+            <strong>brincadeiras, jogos, filmes, livros, 
+            cursos, dicas </strong>e tudo que for necessário 
+            para tornar esse momento mais interessante
+            </p>
+
+            <p>
+            Comece clicando em ver ideias para ver as
+            ideias cadastradas e contribua adicionando
+            a sua ideia.
+            </p>
+
+        </main>
+
+        <div id="buttons">
+            <button onClick="onOff()">
+                + Adicionar Ideias
+            </button>
+
+            <a href="./ideias" class="button">
+                Ver Ideias
+            </a>
+        </div>
+        
+        
+        <footer >Com ❤️ <a href="#">Tuyeto</a></footer>
+    </section>
+
+    <section id="last-ideas">
+        {% include "all_ideas.html"%}
+    </section>
+{% endblock %}
